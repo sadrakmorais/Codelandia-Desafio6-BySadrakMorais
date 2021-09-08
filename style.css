@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+@font-face {
+  font-family: B612;
+  src: url(./font/B612-Bold.ttf);
+}
+@font-face {
+  font-family: B612R;
+  src: url(./font/B612-Regular.ttf);
+}
+
+span,
+h1,
+p {
+  color: #fff;
+  font-family: B612;
+}
+
+.stars-outer {
+  position: relative;
+  display: inline-block;
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.stars-outer::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #f8ce0b;
+}
+.container {
+  background: url(./image/fundo.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 125px;
+}
+.header span {
+  font-size: 2em;
+}
+.header h1 {
+  font-size: 6em;
+}
+.content {
+  max-width: 1200px;
+  display: flex;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  margin: 0 auto;
+  gap: 50px;
+  align-items: center;
+}
+
+.content img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.content img:hover {
+  border-radius: 0;
+  transform: scale(1.2);
+  transition: 0 5s all ease;
+}
+.infos {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+.infos p {
+  max-width: 800px;
+  font-size: 1.5em;
+  font-weight: 400;
+  font-family: B612R;
+  padding-bottom: 20px;
+}
+.infos .infos-footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  align-items: center;
+}
+.infos-duration {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.infos-footer span {
+  font-size: 1.3em;
+}
+.infos-buttons {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  gap: 20px;
+}
+.infos-buttons a {
+  padding: 15px 25px;
+  font-size: 1.3em;
+  color: #fff;
+  font-family: B612R;
+  border-radius: 5px;
+}
+.btn1 {
+  background: #0072d2;
+  transition: 0.5s;
+}
+.btn1:hover {
+  filter: brightness(2);
+}
+.btn2 {
+  background: #131318;
+  transition: 0.5s;
+}
+.btn2:hover {
+  filter: brightness(2);
+}
+@media (max-width: 700px) {
+  .content img {
+    max-width: 200px;
+  }
+  .content img:hover {
+    transform: scale(1.05);
+  }
+  .content {
+    padding: 10px 10px 100px 10px;
+    max-width: 100%;
+    gap: 0;
+    align-items: flex-start;
+  }
+  .infos {
+    padding: 10px;
+  }
+  .infos p {
+    font-size: 1em;
+  }
+  .infos-footer {
+    gap: 5px;
+  }
+  .infos-footer span {
+    font-size: 0.8em;
+  }
+  .infos-buttons {
+    flex-wrap: wrap;
+  }
+}
